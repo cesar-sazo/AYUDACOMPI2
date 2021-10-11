@@ -1,0 +1,163 @@
+digraph AST {
+	edge [arrowhead=none]
+	node [color="#31CEF0" shape=box]
+	Node0 [label="\"AST\""]
+	Node1 [label="CREATE DATABASE"]
+	Node0 -> Node1
+	Node2 [label="Id: DBFase2"]
+	Node1 -> Node2
+	Node3 [label="CREATE TABLE"]
+	Node0 -> Node3
+	Node4 [label="Id: tbbodega"]
+	Node3 -> Node4
+	Node5 [label=CAMPO]
+	Node3 -> Node5
+	Node6 [label="Id: idbodega"]
+	Node5 -> Node6
+	Node7 [label="Tipo: integer"]
+	Node5 -> Node7
+	Node8 [label=VALIDACION]
+	Node5 -> Node8
+	Node9 [label="not null"]
+	Node8 -> Node9
+	Node10 [label=VALIDACION]
+	Node5 -> Node10
+	Node11 [label="primary key"]
+	Node10 -> Node11
+	Node12 [label=CAMPO]
+	Node3 -> Node12
+	Node13 [label="Id: bodega"]
+	Node12 -> Node13
+	Node14 [label="Tipo: varchar"]
+	Node12 -> Node14
+	Node15 [label=EXPRESION]
+	Node14 -> Node15
+	16 [label=ExpresionValor]
+	16 -> 17
+	17 [label=100]
+	Node15 -> 16
+	Node18 [label=VALIDACION]
+	Node12 -> Node18
+	Node19 [label="not null"]
+	Node18 -> Node19
+	Node20 [label=CAMPO]
+	Node3 -> Node20
+	Node21 [label="Id: estado"]
+	Node20 -> Node21
+	Node22 [label="Tipo: integer"]
+	Node20 -> Node22
+	Node23 [label="CREAR INDICE"]
+	Node0 -> Node23
+	Node24 [label="ID INDICE"]
+	Node23 -> Node24
+	Node25 [label=id_index]
+	Node24 -> Node25
+	Node26 [label="ID TABLA"]
+	Node23 -> Node26
+	Node27 [label=tbbodega]
+	Node26 -> Node27
+	Node28 [label=COLUMNAS]
+	Node23 -> Node28
+	Node29 [label=ID]
+	Node28 -> Node29
+	Node30 [label=bodega]
+	Node29 -> Node30
+	Node31 [label=PROCEDURE_PRODUCCION]
+	Node0 -> Node31
+	Node32 [label="create or replace"]
+	Node31 -> Node32
+	Node33 [label=PROCEDURE]
+	Node31 -> Node33
+	Node34 [label=cocoa]
+	Node31 -> Node34
+	Node35 [label=PARAMETROS]
+	Node31 -> Node35
+	Node36 [label="()"]
+	Node35 -> Node36
+	Node37 [label=COMANDO_SQL]
+	Node31 -> Node37
+	Node38 [label=DECLARACIONES]
+	Node31 -> Node38
+	Node39 [label=CODIGO_]
+	Node31 -> Node39
+	Node40 [label=CUERPO_CODE]
+	Node39 -> Node40
+	Node41 [label=BEGIN]
+	Node40 -> Node41
+	Node42 [label=_CODIGO_]
+	Node40 -> Node42
+	Node43 [label=CODIGO_GENERADO]
+	Node42 -> Node43
+	Node44 [label=CODIGO_GENERADO]
+	Node42 -> Node44
+	Node45 [label=CODIGO_GENERADO]
+	Node42 -> Node45
+	Node46 [label=CODIGO_GENERADO]
+	Node42 -> Node46
+	Node47 [label=CODIGO_GENERADO]
+	Node42 -> Node47
+	Node48 [label=END]
+	Node40 -> Node48
+	Node49 [label="$$;"]
+	Node40 -> Node49
+	Node0 -> 50
+	50 [label=EJECUCION_FUNCION]
+	Node51 [label=cocoa]
+	50 -> Node51
+	Node52 [label="()"]
+	50 -> Node52
+	Node53 [label=DELETE]
+	Node0 -> Node53
+	Node54 [label="ID TABLA"]
+	Node53 -> Node54
+	Node55 [label=tbbodega]
+	Node54 -> Node55
+	Node56 [label=WHERE]
+	Node53 -> Node56
+	Node57 [label="VALOR CONDICION"]
+	Node56 -> Node57
+	58 [label=ExpresionRelacional]
+	59 [label=exp1]
+	58 -> 59
+	59 -> 60
+	60 [label=Variable]
+	60 -> 61
+	61 [label=idbodega]
+	62 [label="=="]
+	58 -> 62
+	63 [label=exp2]
+	58 -> 63
+	63 -> 64
+	64 [label=ExpresionValor]
+	64 -> 65
+	65 [label=4]
+	Node57 -> 58
+	Node67 [label=INSTRUCCION_SELECT]
+	Node0 -> Node67
+	Node68 [label=SELECT]
+	Node67 -> Node68
+	Node69 [label=LISTA_CAMPOS]
+	Node67 -> Node69
+	Node70 [label=ACCESO_CAMPO]
+	Node69 -> Node70
+	Node71 [label=idbodega]
+	Node70 -> Node71
+	Node72 [label=ACCESO_CAMPO]
+	Node69 -> Node72
+	Node73 [label=bodega]
+	Node72 -> Node73
+	Node74 [label=FROM]
+	Node67 -> Node74
+	Node75 [label=LISTA_TABLAS]
+	Node67 -> Node75
+	Node76 [label=Nombre_Tabla]
+	Node75 -> Node76
+	Node77 [label=tbbodega]
+	Node76 -> Node77
+	Node78 [label=Uniones]
+	Node67 -> Node78
+	Node79 [label=Final_Instruccion]
+	Node78 -> Node79
+	Node80 [label=""]
+	Node79 -> Node80
+}
